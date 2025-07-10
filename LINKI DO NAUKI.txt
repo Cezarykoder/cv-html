@@ -1,9 +1,0 @@
-Przypomnij sobie C++ podstawy – najlepiej przez rozwiązanie kilku zadań na szkopul.edu.pl lub [codeforces.com].
-📘 Platformy:
-freeCodeCamp.org – HTML, CSS, JS, Git, SQL, Python (pełne kursy + certyfikaty)
-CS50 – Harvard – rewelacyjny darmowy kurs podstaw informatyki, w tym C
-[Coursera / edX] – niektóre kursy za darmo (bez certyfikatu)
-💰 Płatne warte uwagi (jeśli masz budżet):
-Udemy: Czasem za 50 zł dostajesz kursy warte 1000 zł (np. Web Development Bootcamp, PHP z MySQL, C++ z projektami)
-Codecademy Pro – jeśli lubisz interaktywne nauczanie
-Alx.pl – porządna praktyczna szkoła programowania (płatna, ale konkretna)
