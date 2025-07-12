@@ -32,10 +32,60 @@
 			<p>Numer telefonu: 123456789</p>
 		</div>
 	</section>
-	
+	<section>
+		<h2>Formularz kontaktowy</h2>
+		<form id="contactForm">
+			<label for="name">Imię:</label><br>
+			<input type="text" id="name" name="name" required><br><br>
+			
+			<label for="email">E-mail:</label><br>
+			<input type="email" id="email" name="email" required><br><br>
+			
+			<label for="message">Wiadomość:</label><br>
+			<textarea id="message" name="message" required></textarea><br><br>
+			
+			<button type="submit">Wyślij</button>
+		</form>
+		<p id="formMessage" style="margin-top: 10px;"></p>
+	</section>
 	<footer>
 		<p>&copy; 2025 Cezary Moraczewski</p>
 	</footer>
 	</div>
+	<script>
+	document.addEventListener("DOMContentLoaded", function(){
+		const form = document.getElementById('contactForm');
+		const formMessage = document.getElementById('formMessage');
+		
+		form.addEventListener('submit',function(e)
+		{
+		e.preventDefault();
+		
+		const name = form.name.value.trim();
+		const email = form.email.value.trim();
+		const message = form.message.value.trim();
+		
+		if (!name || !email || !message)
+		{
+			formMessage.textContent = "Wypełnij wszystkie pola.";
+			formMessage.style.color = "red";
+			return;
+		}
+		
+		const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+		if (!email.match(emailPattern))
+		{
+			formMessage.textContent = "Wpisz poprawny adres e-mail.";
+			formMessage.style.color = "red";
+			return;
+		}
+		
+		formMessage.textContent = "Wiadomość została wysłana!";
+		formMessage.style.color = "green";
+		form.reset();
+		});
+	})
+		
+	</script>	
 </body>
 </html>
